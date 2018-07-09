@@ -1,0 +1,52 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+	min-height: 100vh
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $font
+	overflow-x: hidden
+	color: $color
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+button, a
+	outline: none
+
+a
+	color: $links-color
+	&:visited
+		color: darken($links-color, 10%)
+
+//Additional classes (for convenience)
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+.upper
+	text-transform: uppercase
+
+//
